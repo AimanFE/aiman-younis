@@ -15,11 +15,11 @@
   25% { transform: translate(-12px, 20px) rotate(270deg); }
   50% { transform: translate(8px, 15px) rotate(180deg); }
   75% { transform: translate(18px, -8px) rotate(90deg); }
-`,c=r.i7`
+`,m=r.i7`
   0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
   33% { transform: translate(15px, -20px) rotate(120deg) scale(1.1); }
   66% { transform: translate(-10px, 10px) rotate(240deg) scale(0.9); }
-`,m=r.Ay.div`
+`,c=r.Ay.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -36,14 +36,19 @@
   left: ${t=>t.$left};
   top: ${t=>t.$top};
   opacity: 0.1;
-  animation: ${t=>{switch(t.$animation){case"float1":default:return d;case"float2":return p;case"float3":return c}}} ${t=>t.$duration} ease-in-out infinite;
+  animation: ${t=>{switch(t.$animation){case"float1":default:return d;case"float2":return p;case"float3":return m}}} ${t=>t.$duration} ease-in-out infinite;
   box-shadow: 0 0 20px ${t=>t.$color}40;
   will-change: transform;
-`,x=[{size:60,color:"#667eea",left:"10%",top:"20%",animation:"float1",duration:"8s"},{size:80,color:"#764ba2",left:"85%",top:"15%",animation:"float2",duration:"10s"},{size:45,color:"#f6ad55",left:"15%",top:"70%",animation:"float3",duration:"12s"},{size:70,color:"#4299e1",left:"80%",top:"75%",animation:"float1",duration:"9s"},{size:35,color:"#667eea",left:"50%",top:"10%",animation:"float2",duration:"11s"},{size:55,color:"#764ba2",left:"25%",top:"45%",animation:"float3",duration:"7s"}],f=()=>(0,n.jsx)(m,{children:x.map((t,e)=>(0,n.jsx)(h,{$size:t.size,$color:t.color,$left:t.left,$top:t.top,$animation:t.animation,$duration:t.duration,initial:{opacity:0,scale:0},animate:{opacity:.1,scale:1},transition:{duration:1.5,delay:.2*e,ease:"easeOut"}},e))}),g=(0,r.Ay)(o.P.h2)`
+`,x=[{size:60,color:"#667eea",left:"10%",top:"20%",animation:"float1",duration:"8s"},{size:80,color:"#764ba2",left:"85%",top:"15%",animation:"float2",duration:"10s"},{size:45,color:"#f6ad55",left:"15%",top:"70%",animation:"float3",duration:"12s"},{size:70,color:"#4299e1",left:"80%",top:"75%",animation:"float1",duration:"9s"},{size:35,color:"#667eea",left:"50%",top:"10%",animation:"float2",duration:"11s"},{size:55,color:"#764ba2",left:"25%",top:"45%",animation:"float3",duration:"7s"}],f=()=>(0,n.jsx)(c,{children:x.map((t,e)=>(0,n.jsx)(h,{$size:t.size,$color:t.color,$left:t.left,$top:t.top,$animation:t.animation,$duration:t.duration,initial:{opacity:0,scale:0},animate:{opacity:.1,scale:1},transition:{duration:1.5,delay:.2*e,ease:"easeOut"}},e))}),g=(0,r.Ay)(o.P.h2)`
   font-size: clamp(1.5rem, 4vw, 3rem);
   margin-bottom: 1rem;
   position: relative;
   display: inline-block;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
   
   span {
     position: relative;
@@ -165,6 +170,11 @@
   text-align: center;
   max-width: 1200px;
   padding: 0 2rem;
+  
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+    margin-top: 2rem;
+  }
 `,Y=(0,r.Ay)(o.P.h1)`
   font-size: clamp(3rem, 8vw, 6rem);
   margin-bottom: 1rem;
@@ -193,12 +203,28 @@
     transform: translateY(-2px);
     box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
   }
+  
+  @media (max-width: 768px) {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
 `,H=(0,r.Ay)(o.P.div)`
   position: absolute;
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
+  
+  @media (max-width: 768px) {
+    bottom: 1rem;
+    transform: translateX(-50%) scale(0.8);
+  }
   
   &::before {
     content: '';
@@ -236,4 +262,4 @@
     }
   }
 `,E=()=>(0,n.jsxs)(P,{id:"hero",children:[(0,n.jsx)(l,{}),(0,n.jsx)(f,{}),(0,n.jsx)(C,{}),(0,n.jsxs)(S,{children:[(0,n.jsx)(Y,{initial:{opacity:0,y:30},animate:{opacity:1,y:0},transition:{duration:.8,delay:.2},children:"Aiman Younis"}),(0,n.jsx)(u,{text:"Frontend Developer"}),(0,n.jsxs)(T,{initial:{opacity:0,y:30},animate:{opacity:1,y:0},transition:{duration:.8,delay:.6},children:["Crafting Beautiful Interactive Websites Where AI-Powered Innovation Creates Digital"," ",(0,n.jsx)(o.P.a,{href:"#particle-playground",style:{color:"inherit",textDecoration:"none",background:"linear-gradient(135deg, #667eea 0%, #764ba2 100%)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text",cursor:"pointer",fontWeight:"bold"},whileHover:{scale:1.05,textShadow:"0 0 8px rgba(102, 126, 234, 0.5)"},whileTap:{scale:.95},onClick:t=>{var e;t.preventDefault(),null===(e=document.querySelector("#particle-playground"))||void 0===e||e.scrollIntoView({behavior:"smooth"})},children:"Magic"})]}),(0,n.jsx)(W,{href:"#contact",initial:{opacity:0,scale:.9},animate:{opacity:1,scale:1},transition:{duration:.8,delay:.8},whileHover:{scale:1.05},whileTap:{scale:.95},children:"Let's Connect"})]}),(0,n.jsx)(H,{onClick:()=>{window.scrollTo({top:window.innerHeight,behavior:"smooth"})},initial:{opacity:0},animate:{opacity:1},transition:{duration:.8,delay:1.2}})]})}}]);
-//# sourceMappingURL=768.2abb9130.chunk.js.map
+//# sourceMappingURL=768.b7ec3fba.chunk.js.map

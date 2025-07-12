@@ -10,7 +10,7 @@
   margin: 0 auto;
   text-align: center;
 `,c=(0,n.Ay)(r.P.h2)`
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 2rem;
   background: ${e=>e.theme.primaryGradient};
   -webkit-background-clip: text;
@@ -49,4 +49,4 @@
     }
   }
 `,u=()=>(0,a.jsx)(o,{id:"contact",children:(0,a.jsxs)(l,{children:[(0,a.jsx)(c,{initial:{opacity:0,y:30},whileInView:{opacity:1,y:0},transition:{duration:.8},viewport:{once:!0},children:"Let's Connect"}),(0,a.jsx)(m,{children:[{icon:"\u260e",label:"Phone",value:"+(972) 52-7979498",href:"tel:+972527979498"},{icon:"\u2709",label:"Email",value:"Aiman.Younis4@gmail.com",href:"mailto:Aiman.Younis4@gmail.com"},{icon:"\ud83d\udcbc",label:"LinkedIn",value:"linkedin.com/in/aimanyounis4",href:"https://linkedin.com/in/aimanyounis4"},{icon:"\ud83d\udcbb",label:"GitHub",value:"github.com/AimanFe",href:"https://github.com/AimanFe"}].map((e,i)=>(0,a.jsxs)(d,{initial:{opacity:0,y:30},whileInView:{opacity:1,y:0},transition:{duration:.8,delay:.2*i},viewport:{once:!0},whileHover:{y:-10,rotateY:5,scale:1.05},children:[(0,a.jsx)(s,{children:e.icon}),(0,a.jsx)(h,{children:e.label}),(0,a.jsx)(p,{children:(0,a.jsx)("a",{href:e.href,target:"_blank",rel:"noopener noreferrer",children:e.value})})]},i))})]})})}}]);
-//# sourceMappingURL=976.4ad4bfe9.chunk.js.map
+//# sourceMappingURL=976.32a7c217.chunk.js.map
