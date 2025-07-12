@@ -47,6 +47,16 @@ const CollaborationPanel = styled(motion.div)`
   height: 500px;
   display: flex;
   flex-direction: column;
+  
+  @media (max-width: 768px) {
+    height: 400px;
+    padding: 0.75rem;
+  }
+  
+  @media (max-width: 480px) {
+    height: 350px;
+    padding: 0.5rem;
+  }
 `;
 
 const EditorHeader = styled.div`
@@ -93,6 +103,18 @@ const CodeEditor = styled.div`
   flex: 1;
   overflow-y: auto;
   position: relative;
+  
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+    padding: 0.75rem;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.65rem;
+    padding: 0.5rem;
+    line-height: 1.4;
+  }
 `;
 
 const CodeLine = styled(motion.div).withConfig({
@@ -128,6 +150,16 @@ const SystemsDiagram = styled(motion.div)`
   height: 500px;
   position: relative;
   overflow: hidden;
+  
+  @media (max-width: 768px) {
+    height: 400px;
+    padding: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    height: 350px;
+    padding: 0.5rem;
+  }
 `;
 
 const ServiceNode = styled(motion.div)<{ x: number; y: number; color: string }>`
@@ -149,6 +181,21 @@ const ServiceNode = styled(motion.div)<{ x: number; y: number; color: string }>`
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transform: translate(-50%, -50%);
+  
+  @media (max-width: 768px) {
+    width: 60px;
+    height: 60px;
+    font-size: 0.6rem;
+    padding: 0.2rem;
+    line-height: 1.1;
+  }
+  
+  @media (max-width: 480px) {
+    width: 50px;
+    height: 50px;
+    font-size: 0.5rem;
+    padding: 0.1rem;
+  }
 `;
 
 const ConnectionSVG = styled(motion.svg)`
@@ -222,12 +269,12 @@ const SystemsInHarmony: React.FC = () => {
   ], []);
 
   const services = useMemo(() => [
-    { name: 'Frontend', x: 15, y: 20, color: '#667eea', status: 'success' as const },
-    { name: 'API Gateway', x: 35, y: 20, color: '#f093fb', status: 'success' as const },
-    { name: 'Backend Service', x: 55, y: 20, color: '#9f7aea', status: 'success' as const },
-    { name: 'Auth Service', x: 75, y: 20, color: '#48bb78', status: 'warning' as const },
-    { name: 'Database', x: 75, y: 65, color: '#ed8936', status: 'success' as const },
-    { name: 'Cache', x: 35, y: 65, color: '#f6ad55', status: 'success' as const }
+    { name: 'Frontend', x: 15, y: 15, color: '#667eea', status: 'success' as const },
+    { name: 'API Gateway', x: 40, y: 15, color: '#f093fb', status: 'success' as const },
+    { name: 'Backend Service', x: 65, y: 15, color: '#9f7aea', status: 'success' as const },
+    { name: 'Auth Service', x: 80, y: 40, color: '#48bb78', status: 'warning' as const },
+    { name: 'Database', x: 65, y: 70, color: '#ed8936', status: 'success' as const },
+    { name: 'Cache', x: 25, y: 70, color: '#f6ad55', status: 'success' as const }
   ], []);
 
   useEffect(() => {
