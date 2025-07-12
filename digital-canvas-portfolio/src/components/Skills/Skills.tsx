@@ -110,20 +110,20 @@ const Skills: React.FC = () => {
 
   const skillCategories = [
     {
-      title: "Frontend Core",
-      skills: ["React", "Redux", "TypeScript", "JavaScript", "HTML", "CSS", "Bootstrap"]
+      title: "Frontend Development",
+      skills: ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Styled-components", "Redux"]
     },
     {
-      title: "Frontend Tools & Testing",
-      skills: ["Webpack", "Jest", "Git", "npm/yarn", "CI/CD", "ESLint"]
+      title: "Development Tools",
+      skills: ["Vite", "Webpack", "Git", "npm/yarn", "Jest", "ESLint", "React Testing Library"]
     },
     {
-      title: "Backend & Integration",
-      skills: ["Node.js", "Express", "Java", "RESTful APIs", "Microservices"]
+      title: "Backend & APIs",
+      skills: ["Node.js", "Express", "RESTful APIs", "GraphQL", "PostgreSQL", "MongoDB", "Couchbase"]
     },
     {
-      title: "Enterprise Systems",
-      skills: ["CRM Platforms", "Billing Systems", "ERP Integration", "Docker", "Kubernetes", "Jenkins", "SQL", "NoSQL"]
+      title: "DevOps & Deployment",
+      skills: ["Docker", "CI/CD", "Jenkins", "Kubernetes", "Git"]
     }
   ];
 
