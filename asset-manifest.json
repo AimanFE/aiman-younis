@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/digital-canvas-portfolio/static/css/main.e6c13ad2.css",
-    "main.js": "/digital-canvas-portfolio/static/js/main.c19fb215.js",
-    "static/js/768.5110b3f2.chunk.js": "/digital-canvas-portfolio/static/js/768.5110b3f2.chunk.js",
+    "main.js": "/digital-canvas-portfolio/static/js/main.f512a0f3.js",
+    "static/js/768.85d91052.chunk.js": "/digital-canvas-portfolio/static/js/768.85d91052.chunk.js",
     "static/js/418.c2a4e558.chunk.js": "/digital-canvas-portfolio/static/js/418.c2a4e558.chunk.js",
     "static/js/426.3798302c.chunk.js": "/digital-canvas-portfolio/static/js/426.3798302c.chunk.js",
     "static/js/260.0c9dcfa6.chunk.js": "/digital-canvas-portfolio/static/js/260.0c9dcfa6.chunk.js",
-    "static/js/728.9820605f.chunk.js": "/digital-canvas-portfolio/static/js/728.9820605f.chunk.js",
+    "static/js/728.ba191837.chunk.js": "/digital-canvas-portfolio/static/js/728.ba191837.chunk.js",
     "static/js/976.32a7c217.chunk.js": "/digital-canvas-portfolio/static/js/976.32a7c217.chunk.js",
     "static/js/831.7ad147f4.chunk.js": "/digital-canvas-portfolio/static/js/831.7ad147f4.chunk.js",
     "static/js/196.282d3eee.chunk.js": "/digital-canvas-portfolio/static/js/196.282d3eee.chunk.js",
@@ -15,12 +15,12 @@
     "static/media/profile.jpg": "/digital-canvas-portfolio/static/media/profile.ce11a2bfacc1dc2648fd.jpg",
     "index.html": "/digital-canvas-portfolio/index.html",
     "main.e6c13ad2.css.map": "/digital-canvas-portfolio/static/css/main.e6c13ad2.css.map",
-    "main.c19fb215.js.map": "/digital-canvas-portfolio/static/js/main.c19fb215.js.map",
-    "768.5110b3f2.chunk.js.map": "/digital-canvas-portfolio/static/js/768.5110b3f2.chunk.js.map",
+    "main.f512a0f3.js.map": "/digital-canvas-portfolio/static/js/main.f512a0f3.js.map",
+    "768.85d91052.chunk.js.map": "/digital-canvas-portfolio/static/js/768.85d91052.chunk.js.map",
     "418.c2a4e558.chunk.js.map": "/digital-canvas-portfolio/static/js/418.c2a4e558.chunk.js.map",
     "426.3798302c.chunk.js.map": "/digital-canvas-portfolio/static/js/426.3798302c.chunk.js.map",
     "260.0c9dcfa6.chunk.js.map": "/digital-canvas-portfolio/static/js/260.0c9dcfa6.chunk.js.map",
-    "728.9820605f.chunk.js.map": "/digital-canvas-portfolio/static/js/728.9820605f.chunk.js.map",
+    "728.ba191837.chunk.js.map": "/digital-canvas-portfolio/static/js/728.ba191837.chunk.js.map",
     "976.32a7c217.chunk.js.map": "/digital-canvas-portfolio/static/js/976.32a7c217.chunk.js.map",
     "831.7ad147f4.chunk.js.map": "/digital-canvas-portfolio/static/js/831.7ad147f4.chunk.js.map",
     "196.282d3eee.chunk.js.map": "/digital-canvas-portfolio/static/js/196.282d3eee.chunk.js.map",
@@ -29,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.c19fb215.js"
+    "static/js/main.f512a0f3.js"
   ]
 }
