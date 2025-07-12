@@ -1,4 +1,4 @@
-"use strict";(self.webpackChunkdigital_canvas_portfolio=self.webpackChunkdigital_canvas_portfolio||[]).push([[768],{948:(t,e,i)=>{i.d(e,{c:()=>r});var a=i(43);const r=()=>{const[t,e]=(0,a.useState)({x:0,y:0}),i=(0,a.useCallback)(t=>{e({x:t.clientX,y:t.clientY})},[]);return(0,a.useEffect)(()=>{let t;const e=e=>{t&&clearTimeout(t),t=setTimeout(()=>i(e),16)};return window.addEventListener("mousemove",e),()=>{window.removeEventListener("mousemove",e),t&&clearTimeout(t)}},[i]),t}},986:(t,e,i)=>{i.r(e),i.d(e,{default:()=>E});var a=i(43),r=i(464),o=i(487),n=i(579);const s=r.Ay.canvas`
+"use strict";(self.webpackChunkdigital_canvas_portfolio=self.webpackChunkdigital_canvas_portfolio||[]).push([[768],{948:(t,e,i)=>{i.d(e,{c:()=>r});var a=i(43);const r=()=>{const[t,e]=(0,a.useState)({x:0,y:0}),i=(0,a.useCallback)(t=>{e({x:t.clientX,y:t.clientY})},[]);return(0,a.useEffect)(()=>{let t;const e=e=>{t&&clearTimeout(t),t=setTimeout(()=>i(e),16)};return window.addEventListener("mousemove",e),()=>{window.removeEventListener("mousemove",e),t&&clearTimeout(t)}},[i]),t}},986:(t,e,i)=>{i.r(e),i.d(e,{default:()=>H});var a=i(43),r=i(464),o=i(487),n=i(579);const s=r.Ay.canvas`
   position: absolute;
   top: 0;
   left: 0;
@@ -39,7 +39,12 @@
   animation: ${t=>{switch(t.$animation){case"float1":default:return d;case"float2":return p;case"float3":return m}}} ${t=>t.$duration} ease-in-out infinite;
   box-shadow: 0 0 20px ${t=>t.$color}40;
   will-change: transform;
-`,x=[{size:60,color:"#667eea",left:"10%",top:"20%",animation:"float1",duration:"8s"},{size:80,color:"#764ba2",left:"85%",top:"15%",animation:"float2",duration:"10s"},{size:45,color:"#f6ad55",left:"15%",top:"70%",animation:"float3",duration:"12s"},{size:70,color:"#4299e1",left:"80%",top:"75%",animation:"float1",duration:"9s"},{size:35,color:"#667eea",left:"50%",top:"10%",animation:"float2",duration:"11s"},{size:55,color:"#764ba2",left:"25%",top:"45%",animation:"float3",duration:"7s"}],f=()=>(0,n.jsx)(c,{children:x.map((t,e)=>(0,n.jsx)(h,{$size:t.size,$color:t.color,$left:t.left,$top:t.top,$animation:t.animation,$duration:t.duration,initial:{opacity:0,scale:0},animate:{opacity:.1,scale:1},transition:{duration:1.5,delay:.2*e,ease:"easeOut"}},e))}),g=(0,r.Ay)(o.P.h2)`
+  
+  @media (max-width: 768px) {
+    opacity: 0.15;
+    box-shadow: 0 0 25px ${t=>t.$color}60;
+  }
+`,x=[{size:60,color:"#667eea",left:"10%",top:"20%",animation:"float1",duration:"8s"},{size:80,color:"#764ba2",left:"85%",top:"15%",animation:"float2",duration:"10s"},{size:45,color:"#f6ad55",left:"15%",top:"70%",animation:"float3",duration:"12s"},{size:70,color:"#4299e1",left:"80%",top:"75%",animation:"float1",duration:"9s"},{size:35,color:"#667eea",left:"50%",top:"10%",animation:"float2",duration:"11s"},{size:55,color:"#764ba2",left:"25%",top:"45%",animation:"float3",duration:"7s"}],g=()=>(0,n.jsx)(c,{children:x.map((t,e)=>(0,n.jsx)(h,{$size:t.size,$color:t.color,$left:t.left,$top:t.top,$animation:t.animation,$duration:t.duration,initial:{opacity:0,scale:0},animate:{opacity:.1,scale:1},transition:{duration:1.5,delay:.2*e,ease:"easeOut"}},e))}),f=(0,r.Ay)(o.P.h2)`
   font-size: clamp(1.5rem, 4vw, 3rem);
   margin-bottom: 1rem;
   position: relative;
@@ -76,7 +81,7 @@
       }
     }
   }
-`,u=t=>{let{text:e}=t;const i=e.split(" "),a={visible:{opacity:1,y:0,transition:{type:"spring",damping:20,stiffness:120,duration:.4}},hidden:{opacity:0,y:15,transition:{type:"spring",damping:20,stiffness:120,duration:.4}}};return(0,n.jsx)(g,{variants:{hidden:{opacity:0},visible:{opacity:1,transition:{staggerChildren:.08,delayChildren:.4,duration:.6}}},initial:"hidden",animate:"visible",children:i.map((t,e)=>(0,n.jsx)(o.P.span,{variants:a,style:{marginRight:"0.5rem"},children:t},e))})};var y=i(948);const w=i.p+"static/media/profile.ce11a2bfacc1dc2648fd.jpg",b=(0,r.Ay)(o.P.div)`
+`,u=t=>{let{text:e}=t;const i=e.split(" "),a={visible:{opacity:1,y:0,transition:{type:"spring",damping:20,stiffness:120,duration:.4}},hidden:{opacity:0,y:15,transition:{type:"spring",damping:20,stiffness:120,duration:.4}}};return(0,n.jsx)(f,{variants:{hidden:{opacity:0},visible:{opacity:1,transition:{staggerChildren:.08,delayChildren:.4,duration:.6}}},initial:"hidden",animate:"visible",children:i.map((t,e)=>(0,n.jsx)(o.P.span,{variants:a,style:{marginRight:"0.5rem"},children:t},e))})};var y=i(948);const w=i.p+"static/media/profile.ce11a2bfacc1dc2648fd.jpg",b=(0,r.Ay)(o.P.div)`
   position: absolute;
   top: 20%;
   right: 10%;
@@ -184,11 +189,18 @@
   background-clip: text;
   text-fill-color: transparent;
   line-height: 1.1;
-`,T=(0,r.Ay)(o.P.p)`
+`,I=(0,r.Ay)(o.P.p)`
   font-size: clamp(1.2rem, 3vw, 2rem);
   color: ${t=>t.theme.textSecondary};
   margin-bottom: 2rem;
-`,W=(0,r.Ay)(o.P.a)`
+  line-height: 1.5;
+  
+  @media (max-width: 768px) {
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    padding: 0 0.5rem;
+  }
+`,T=(0,r.Ay)(o.P.a)`
   display: inline-block;
   padding: 1rem 3rem;
   background: ${t=>t.theme.primaryGradient};
@@ -214,7 +226,7 @@
     padding: 0.7rem 1.5rem;
     font-size: 0.9rem;
   }
-`,H=(0,r.Ay)(o.P.div)`
+`,W=(0,r.Ay)(o.P.div)`
   position: absolute;
   bottom: 2rem;
   left: 50%;
@@ -222,6 +234,11 @@
   cursor: pointer;
   
   @media (max-width: 768px) {
+    bottom: 1.5rem;
+    transform: translateX(-50%) scale(0.9);
+  }
+  
+  @media (max-width: 480px) {
     bottom: 1rem;
     transform: translateX(-50%) scale(0.8);
   }
@@ -261,5 +278,5 @@
       opacity: 0;
     }
   }
-`,E=()=>(0,n.jsxs)(P,{id:"hero",children:[(0,n.jsx)(l,{}),(0,n.jsx)(f,{}),(0,n.jsx)(C,{}),(0,n.jsxs)(S,{children:[(0,n.jsx)(Y,{initial:{opacity:0,y:30},animate:{opacity:1,y:0},transition:{duration:.8,delay:.2},children:"Aiman Younis"}),(0,n.jsx)(u,{text:"Frontend Developer"}),(0,n.jsxs)(T,{initial:{opacity:0,y:30},animate:{opacity:1,y:0},transition:{duration:.8,delay:.6},children:["Crafting Beautiful Interactive Websites Where AI-Powered Innovation Creates Digital"," ",(0,n.jsx)(o.P.a,{href:"#particle-playground",style:{color:"inherit",textDecoration:"none",background:"linear-gradient(135deg, #667eea 0%, #764ba2 100%)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text",cursor:"pointer",fontWeight:"bold"},whileHover:{scale:1.05,textShadow:"0 0 8px rgba(102, 126, 234, 0.5)"},whileTap:{scale:.95},onClick:t=>{var e;t.preventDefault(),null===(e=document.querySelector("#particle-playground"))||void 0===e||e.scrollIntoView({behavior:"smooth"})},children:"Magic"})]}),(0,n.jsx)(W,{href:"#contact",initial:{opacity:0,scale:.9},animate:{opacity:1,scale:1},transition:{duration:.8,delay:.8},whileHover:{scale:1.05},whileTap:{scale:.95},children:"Let's Connect"})]}),(0,n.jsx)(H,{onClick:()=>{window.scrollTo({top:window.innerHeight,behavior:"smooth"})},initial:{opacity:0},animate:{opacity:1},transition:{duration:.8,delay:1.2}})]})}}]);
-//# sourceMappingURL=768.b7ec3fba.chunk.js.map
+`,H=()=>(0,n.jsxs)(P,{id:"hero",children:[(0,n.jsx)(l,{}),(0,n.jsx)(g,{}),(0,n.jsx)(C,{}),(0,n.jsxs)(S,{children:[(0,n.jsx)(Y,{initial:{opacity:0,y:30},animate:{opacity:1,y:0},transition:{duration:.8,delay:.2},children:"Aiman Younis"}),(0,n.jsx)(u,{text:"Frontend Developer"}),(0,n.jsxs)(I,{initial:{opacity:0,y:30},animate:{opacity:1,y:0},transition:{duration:.8,delay:.6},children:["Crafting Beautiful Interactive Websites Where AI-Powered Innovation Creates Digital"," ",(0,n.jsx)(o.P.a,{href:"#particle-playground",style:{color:"inherit",textDecoration:"none",background:"linear-gradient(135deg, #667eea 0%, #764ba2 100%)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text",cursor:"pointer",fontWeight:"bold",borderBottom:"2px solid transparent",borderImage:"linear-gradient(135deg, #667eea 0%, #764ba2 100%) 1",borderImageSlice:1},whileHover:{scale:1.05,textShadow:"0 0 8px rgba(102, 126, 234, 0.5)"},whileTap:{scale:.95},onClick:t=>{var e;t.preventDefault(),null===(e=document.querySelector("#particle-playground"))||void 0===e||e.scrollIntoView({behavior:"smooth"})},children:"Magic"})]}),(0,n.jsx)(T,{href:"#contact",initial:{opacity:0,scale:.9},animate:{opacity:1,scale:1},transition:{duration:.8,delay:.8},whileHover:{scale:1.05},whileTap:{scale:.95},children:"Let's Connect"})]}),(0,n.jsx)(W,{onClick:()=>{window.scrollTo({top:window.innerHeight,behavior:"smooth"})},initial:{opacity:0},animate:{opacity:1},transition:{duration:.8,delay:1.2}})]})}}]);
+//# sourceMappingURL=768.5110b3f2.chunk.js.map
