@@ -8,6 +8,11 @@ const GlowingTitle = styled(motion.h2)`
   position: relative;
   display: inline-block;
   
+  @media (max-width: 768px) {
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  
   span {
     position: relative;
     display: inline-block;

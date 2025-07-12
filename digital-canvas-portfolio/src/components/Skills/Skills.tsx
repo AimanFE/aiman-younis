@@ -15,13 +15,17 @@ const Container = styled.div`
 `;
 
 const Title = styled(motion.h2)`
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 4rem;
   text-align: center;
   background: ${props => props.theme.primaryGradient};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 2rem;
+  }
 `;
 
 const SkillsGrid = styled.div`
@@ -29,6 +33,12 @@ const SkillsGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 const SkillCategory = styled(motion.div)`
@@ -93,8 +103,9 @@ const AchievementText = styled.p`
 
 const Skills: React.FC = () => {
   const { ref, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true
+    threshold: 0.2,
+    triggerOnce: true,
+    rootMargin: '0px 0px -50px 0px'
   });
 
   const skillCategories = [

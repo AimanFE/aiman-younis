@@ -22,6 +22,11 @@ const ContentWrapper = styled.div`
   text-align: center;
   max-width: 1200px;
   padding: 0 2rem;
+  
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+    margin-top: 2rem;
+  }
 `;
 
 const Title = styled(motion.h1)`
@@ -39,6 +44,13 @@ const Subtitle = styled(motion.p)`
   font-size: clamp(1.2rem, 3vw, 2rem);
   color: ${props => props.theme.textSecondary};
   margin-bottom: 2rem;
+  line-height: 1.5;
+  
+  @media (max-width: 768px) {
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    padding: 0 0.5rem;
+  }
 `;
 
 const CTAButton = styled(motion.a)`
@@ -56,6 +68,17 @@ const CTAButton = styled(motion.a)`
     transform: translateY(-2px);
     box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
   }
+  
+  @media (max-width: 768px) {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
 `;
 
 const ScrollIndicator = styled(motion.div)`
@@ -64,6 +87,16 @@ const ScrollIndicator = styled(motion.div)`
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
+  
+  @media (max-width: 768px) {
+    bottom: 1.5rem;
+    transform: translateX(-50%) scale(0.9);
+  }
+  
+  @media (max-width: 480px) {
+    bottom: 1rem;
+    transform: translateX(-50%) scale(0.8);
+  }
   
   &::before {
     content: '';
@@ -140,7 +173,10 @@ const Hero: React.FC = () => {
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
               cursor: 'pointer',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              borderBottom: '2px solid transparent',
+              borderImage: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%) 1',
+              borderImageSlice: 1
             }}
             whileHover={{ 
               scale: 1.05,

@@ -7,6 +7,10 @@ const ExperienceSection = styled.section`
   min-height: 100vh;
   padding: 4rem 2rem;
   background: ${props => props.theme.background};
+  
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
 `;
 
 const Container = styled.div`
@@ -15,13 +19,17 @@ const Container = styled.div`
 `;
 
 const Title = styled(motion.h2)`
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 4rem;
   text-align: center;
   background: ${props => props.theme.primaryGradient};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 2rem;
+  }
 `;
 
 const Timeline = styled.div`

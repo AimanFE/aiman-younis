@@ -34,25 +34,36 @@ const MatrixRain: React.FC = () => {
       drops[x] = 1;
     }
 
-    const draw = () => {
-      ctx.fillStyle = 'rgba(10, 14, 39, 0.04)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    let animationId: number;
+    let lastTime = 0;
+    const targetFPS = 30; // Reduce from ~28fps to 30fps for better performance
+    const frameInterval = 1000 / targetFPS;
 
-      ctx.fillStyle = '#667eea';
-      ctx.font = fontSize + 'px monospace';
+    const draw = (currentTime: number) => {
+      if (currentTime - lastTime >= frameInterval) {
+        ctx.fillStyle = 'rgba(10, 14, 39, 0.04)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      for (let i = 0; i < drops.length; i++) {
-        const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        ctx.fillStyle = '#667eea';
+        ctx.font = fontSize + 'px monospace';
 
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-          drops[i] = 0;
+        for (let i = 0; i < drops.length; i++) {
+          const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
+          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0;
+          }
+          drops[i]++;
         }
-        drops[i]++;
+        
+        lastTime = currentTime;
       }
+      
+      animationId = requestAnimationFrame(draw);
     };
 
-    const interval = setInterval(draw, 35);
+    animationId = requestAnimationFrame(draw);
 
     const handleResize = () => {
       canvas.width = window.innerWidth;
@@ -62,7 +73,9 @@ const MatrixRain: React.FC = () => {
     window.addEventListener('resize', handleResize);
 
     return () => {
-      clearInterval(interval);
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
       window.removeEventListener('resize', handleResize);
     };
   }, []);

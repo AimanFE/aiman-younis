@@ -18,7 +18,7 @@ const Container = styled.div`
 `;
 
 const Title = styled(motion.h2)`
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 2rem;
   background: ${props => props.theme.primaryGradient};
   -webkit-background-clip: text;

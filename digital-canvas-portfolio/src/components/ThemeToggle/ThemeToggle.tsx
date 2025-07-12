@@ -7,14 +7,11 @@ const ToggleContainer = styled(motion.div)`
   position: fixed;
   top: 50%;
   right: 2rem;
-  transform: translateY(-50%);
   z-index: 1000;
   
   @media (max-width: 768px) {
-    top: auto;
-    bottom: 2rem;
+    top: 2rem;
     right: 1rem;
-    transform: none;
   }
 `;
 

@@ -1,0 +1,25 @@
+<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="96" cy="96" r="96" fill="url(#grad1)"/>
+  
+  <!-- Person head -->
+  <circle cx="96" cy="66" r="24" fill="white" opacity="0.9"/>
+  
+  <!-- Person body -->
+  <path d="M96 90 C72 90 60 108 60 132 L60 168 L132 168 L132 132 C132 108 120 90 96 90 Z" fill="white" opacity="0.9"/>
+  
+  <!-- Code brackets decoration -->
+  <text x="48" y="54" fill="white" font-size="48" opacity="0.7" font-family="monospace">&lt;</text>
+  <text x="132" y="54" fill="white" font-size="48" opacity="0.7" font-family="monospace">/&gt;</text>
+  
+  <!-- Developer badge -->
+  <circle cx="96" cy="150" r="8" fill="#f6ad55"/>
+  <text x="96" y="156" fill="white" font-size="12" text-anchor="middle" font-family="monospace">AY</text>
+</svg>

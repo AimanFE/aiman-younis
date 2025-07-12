@@ -14,7 +14,12 @@ export const GlobalStyles = createGlobalStyle`
     @media (max-width: 768px) {
       font-size: 14px;
     }
+    
+    @media (max-width: 480px) {
+      font-size: 13px;
+    }
   }
+  
 
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -46,10 +51,15 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.3s ease;
     border: none;
     outline: none;
+    min-height: 44px; /* iOS touch target guideline */
     
     &:disabled {
       cursor: not-allowed;
       opacity: 0.6;
+    }
+    
+    @media (max-width: 768px) {
+      min-height: 48px; /* Better touch targets on mobile */
     }
   }
 

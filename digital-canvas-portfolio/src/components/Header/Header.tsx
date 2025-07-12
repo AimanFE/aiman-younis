@@ -110,11 +110,21 @@ const Header: React.FC = () => {
   const scrollProgress = useScrollProgress();
 
   useEffect(() => {
-    const handleScroll = () => {
+    let ticking = false;
+    
+    const updateScrollState = () => {
       setIsScrolled(window.scrollY > 50);
+      ticking = false;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateScrollState);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -122,7 +132,7 @@ const Header: React.FC = () => {
     { href: '#hero', label: 'Home' },
     { href: '#skills', label: 'Skills' },
     { href: '#experience', label: 'Experience' },
-    { href: '#code-art', label: 'Art' },
+    { href: '#code-art', label: 'Systems' },
     { href: '#contact', label: 'Contact' }
   ];
 

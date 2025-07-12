@@ -58,6 +58,11 @@ const FloatingShape = styled(motion.div)<{
   }} ${props => props.$duration} ease-in-out infinite;
   box-shadow: 0 0 20px ${props => props.$color}40;
   will-change: transform;
+  
+  @media (max-width: 768px) {
+    opacity: 0.15;
+    box-shadow: 0 0 25px ${props => props.$color}60;
+  }
 `;
 
 const shapes = [

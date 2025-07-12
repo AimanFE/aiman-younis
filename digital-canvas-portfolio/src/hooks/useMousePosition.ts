@@ -1,32 +1,52 @@
 import { useState, useEffect, useCallback } from 'react';
 
-interface MousePosition {
+interface PointerPosition {
   x: number;
   y: number;
 }
 
-export const useMousePosition = (): MousePosition => {
-  const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 0, y: 0 });
+export const useMousePosition = (): PointerPosition => {
+  const [pointerPosition, setPointerPosition] = useState<PointerPosition>({ x: 0, y: 0 });
 
-  const updateMousePosition = useCallback((event: MouseEvent) => {
-    setMousePosition({ x: event.clientX, y: event.clientY });
+  const updatePosition = useCallback((clientX: number, clientY: number) => {
+    setPointerPosition({ x: clientX, y: clientY });
   }, []);
 
+  const handleMouseMove = useCallback((event: MouseEvent) => {
+    updatePosition(event.clientX, event.clientY);
+  }, [updatePosition]);
+
+  const handleTouchMove = useCallback((event: TouchEvent) => {
+    if (event.touches.length > 0) {
+      const touch = event.touches[0];
+      updatePosition(touch.clientX, touch.clientY);
+    }
+  }, [updatePosition]);
+
   useEffect(() => {
-    // Throttle mouse events for performance
+    // Throttle events for performance
     let timeoutId: NodeJS.Timeout;
-    const throttledUpdate = (event: MouseEvent) => {
+    
+    const throttledMouseUpdate = (event: MouseEvent) => {
       if (timeoutId) clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => updateMousePosition(event), 16); // ~60fps
+      timeoutId = setTimeout(() => handleMouseMove(event), 16); // ~60fps
     };
 
-    window.addEventListener('mousemove', throttledUpdate);
+    const throttledTouchUpdate = (event: TouchEvent) => {
+      if (timeoutId) clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => handleTouchMove(event), 16); // ~60fps
+    };
+
+    // Add both mouse and touch event listeners
+    window.addEventListener('mousemove', throttledMouseUpdate);
+    window.addEventListener('touchmove', throttledTouchUpdate);
 
     return () => {
-      window.removeEventListener('mousemove', throttledUpdate);
+      window.removeEventListener('mousemove', throttledMouseUpdate);
+      window.removeEventListener('touchmove', throttledTouchUpdate);
       if (timeoutId) clearTimeout(timeoutId);
     };
-  }, [updateMousePosition]);
+  }, [handleMouseMove, handleTouchMove]);
 
-  return mousePosition;
+  return pointerPosition;
 };
